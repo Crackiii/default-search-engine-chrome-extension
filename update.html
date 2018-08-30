@@ -1,0 +1,78 @@
+<html>
+    <title>Update Search Engine</title>
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .f{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        form input[type=text]{
+            width: 500px;
+            height: 60px;
+            padding: 15px;
+            border:none;
+            border:1px solid #ddd;
+            display: block;
+            margin: auto
+        }
+        :root{
+        --site-color:#66bb6a;
+        --site-hover-color:#5da960;
+        --site-active-color:#43a047;
+    }
+    .btn {
+        border:none;
+        width: 260px;
+        font-size: 15px;
+        outline:none;
+        padding: 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        display: inline-block;
+        margin:0 auto;
+    }
+    .btn-default {
+        background: var(--site-color);
+        color: #fff;
+    }
+    .mess{
+        padding: 40px 0;
+        font-size: 20px;
+        color: #43a047;
+        text-align: center;
+    }
+    </style>
+    <body>
+        <form action="" id="myForm">
+            <div class="mess"></div>
+            <input type="text" name="" id="" placeholder="Enter Search engine URL">
+            <div class="f">
+            <button type="submit" id="UpdateFile" class="btn btn-default"> Update Now </button>
+            </div>
+        </form>
+    </body>
+    <script>
+        $("#myForm").on("submit",function(e){
+            e.preventDefault();
+           $.ajax({
+               method:"POST",
+               url :"file.php",
+               data:"m="+$("form input").val()
+           }).then(function(res){
+              console.log(res)
+              if(res.toLowerCase() === "success"){
+                $(".mess").text("Successfully Updated !");
+                $("#myForm").trigger("reset");
+              }
+           })
+        })
+    </script>
+</html>

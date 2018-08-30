@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+	body{
+		width: 300px;
+		padding: 10px;
+		background: #f8f8f8;
+	}
+	.btn a{
+		text-decoration: none;
+		color: #fff;
+	}
+	.k{
+		background: #fff;
+		padding: 10px;
+		text-align: center
+	}
+	:root{
+        --site-color:#66bb6a;
+        --site-hover-color:#5da960;
+        --site-active-color:#43a047;
+    }
+    .btn {
+        border:none;
+        font-size: 15px;
+        outline:none;
+        padding: 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        display: inline-block;
+        margin:0 auto;
+    }
+    .btn-default {
+        background: var(--site-color);
+        color: #fff;
+    }
+	.btns{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+</style>
+<body>
+
+	<div class="k">
+			<h2>Win free prizes every day!</h2>
+			<p>We give away 1000's of prizes on a daily basis.</p>
+			<br><br>
+			Raffle # <span> <b class="random"></b> </span> 
+			<br><br><br>
+			Date : 
+			<span class="date">  </span>
+			<br>
+			Time : <span class="time">  </span>
+			<br><br><br>
+			Someone near you won today a free iPhone!!
+			<br>
+			<br>
+			<br>
+			
+			<h3>Maybe it will be you tomorrow</h3> 
+			<p>keep checking here every day.</p>
+
+			<br>
+			<br>
+			<br>
+
+			<div class="btns">
+				<button id="use" class="btn btn-default"> <a href="update.html" target="_blank"> Update Search Engine </a> </button>
+				<button id="gts" class="btn btn-default"> <a href="show.html" target="_blank"> Get to Store </a> </button>
+			</div>
+	</div>
+
+<!--https://developer.chrome.com/extensions/settings_override-->
+</body>
+
+<script src="ext.js"></script>
+</html>
